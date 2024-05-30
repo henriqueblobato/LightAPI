@@ -49,7 +49,9 @@ class TestInitializationAndSetup(TestCase):
         assert create_handler.model == mock_model
 
     @patch("database.SessionLocal")
-    async def test_create_handler_handle_success(self, mock_session_local, mock_request, mock_model):
+    async def test_create_handler_handle_success(
+        self, mock_session_local, mock_request, mock_model
+    ):
         mock_session = MagicMock()
         mock_session_local.return_value = mock_session
 
@@ -64,7 +66,9 @@ class TestInitializationAndSetup(TestCase):
         assert response.status == 201
 
     @patch("database.SessionLocal")
-    async def test_create_handler_handle_invalid_data(self, mock_session_local, mock_request, mock_model):
+    async def test_create_handler_handle_invalid_data(
+        self, mock_session_local, mock_request, mock_model
+    ):
         mock_session = MagicMock()
         mock_session_local.return_value = mock_session
 

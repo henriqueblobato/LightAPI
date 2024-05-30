@@ -8,19 +8,8 @@ from handlers import create_handler
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.StreamHandler()
-    ]
+    handlers=[logging.StreamHandler()],
 )
-
-
-class CustomApplication(web.Application):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    async def _handle(self, *args, **kwargs):
-        logging.info(f"Handling request: {args}, {kwargs}")
-        return super()._handle(*args, **kwargs)
 
 
 class LightApi:

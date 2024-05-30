@@ -28,5 +28,13 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    package_data={
+        '': ['alembic.ini', 'migrations/script.py.mako'],
+    },
+    entry_points={
+        'console_scripts': [
+            'lightapi = cli:main',
+        ],
+    },
     python_requires='>=3.11',
 )

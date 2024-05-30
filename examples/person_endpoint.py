@@ -1,18 +1,16 @@
-from sqlalchemy import Column, Integer, String
-from database import CustomBase
 from lightapi import LightApi
+from models.example_models import Person, Company
 
-
-class Person(CustomBase):
-    pk = Column(Integer, primary_key=True, autoincrement=True, unique=True)
-    name = Column(String)
-    email = Column(String, unique=True)
-
-
-class Company(CustomBase):
-    pk = Column(Integer, primary_key=True, autoincrement=True, unique=True)
-    name = Column(String)
-    email = Column(String, unique=True)
+# class Person(CustomBase):
+#     pk = Column(Integer, primary_key=True, autoincrement=True, unique=True)
+#     name = Column(String)
+#     email = Column(String, unique=True)
+#
+#
+# class Company(CustomBase):
+#     pk = Column(Integer, primary_key=True, autoincrement=True, unique=True)
+#     name = Column(String)
+#     email = Column(String, unique=True)
 
 
 if __name__ == '__main__':
